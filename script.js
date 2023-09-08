@@ -9,6 +9,8 @@ function threeSum(arr, target) {
 		while(j<k){
 			let sum = arr[i] + arr[j] + arr[k];
 
+			if(sum == target) return sum;
+			
 		    if(Math.abs(sum-target) < diff){
 				diff = Math.abs(sum-target);
 				ans = sum;
@@ -16,7 +18,7 @@ function threeSum(arr, target) {
 			if(sum > traget){
 				k--;
 			}
-			else i++;
+			else j++;
 		}
 	}
 	return ans;
